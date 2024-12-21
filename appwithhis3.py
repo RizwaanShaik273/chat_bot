@@ -15,26 +15,51 @@ def evaluate_text(text):
         
         # Custom prompt to classify AI vs Human text based on detailed analysis
         prompt = f'''
-       Identify if content is AI-generated or human-written by analyzing key traits and patterns.
+       Goal:
+Identify whether the provided text is AI-generated or human-written by analyzing structure, tone, style, and language patterns.
 
-Human Text Characteristics
-Purpose-Driven: Clear goals, problem-solving focus, and actionable insights.
-Relatable Examples: Practical, specific details connected to real-world scenarios.
-Natural Flow: Logical progression with varied sentence structures.
-Personal Tone: Emotional, conversational, and contextually motivated.
-AI Text Patterns
-Neutral Tone: Robotic or impersonal, lacking emotional depth.
-Repetitive Ideas: Recurring phrases or lack of personalization.
-Abstract Content: Missing specific, relatable examples.
-Complex Sentences: Overly formal or convoluted structures.
-Evaluation Criteria
-Purpose and Specificity: Does it solve problems with clear goals (Human) or stay abstract (AI)?
-Relatability: Are examples practical and detailed (Human) or vague (AI)?
-Tone: Is it emotional and personal (Human) or neutral (AI)?
-Flow: Does it read naturally (Human) or feel disjointed (AI)?
-Scoring
-AI: Higher scores for neutral tone, repetition, or lack of examples.
-Human: Lower scores for purpose, relatable examples, and emotional tone.
+Instructions:
+
+Structure:
+
+AI content is well-organized with clear, logical progression.
+Human content may have varied structures, occasional tangents, or informal phrasing.
+Vocabulary:
+
+AI uses formal, consistent vocabulary (e.g., "significant," "innovative").
+Human content includes slang, colloquialisms, and personal opinions.
+Repetition:
+
+AI often repeats ideas or terms (e.g., “important,” “critical”).
+Humans vary language and may repeat for emphasis.
+Tone and Style:
+
+AI has a neutral, professional tone.
+Human content may have emotional expression or humor.
+Complexity:
+
+AI lacks nuanced, subjective reflection.
+Humans offer complex thoughts and admit uncertainty.
+Grammar:
+
+AI follows perfect grammar but may have awkward phrasing.
+Humans use informal phrasing, slang, and contractions.
+Sentence Flow:
+
+AI has consistent, logical sentence flow.
+Humans may have pauses or shifts based on real-time thinking.
+General Knowledge vs. Personal Experience:
+
+AI relies on generalized facts.
+Humans include personal stories or opinions.
+Special Words & Patterns:
+
+AI content often uses terms like "optimization," "efficiency," and "scalable."
+Human content may have more emotional expression and informal tone.
+Task:
+Evaluate the text and determine if it's AI or human-written based on the patterns above. Provide a confidence level.
+
+
 
         
         Text: {text}
