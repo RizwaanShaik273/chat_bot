@@ -15,41 +15,26 @@ def evaluate_text(text):
         
         # Custom prompt to classify AI vs Human text based on detailed analysis
         prompt = f'''
-        Objective:
-To evaluate whether the content is AI-generated or human-written, we need to assess various factors based on specific patterns and traits identified in human-generated content.
+       Identify if content is AI-generated or human-written by analyzing key traits and patterns.
 
-1. General Characteristics of Human Text:
-Purpose-Driven: Human text tends to focus on clear objectives or goals. It includes explanations that are directly related to solving real-world problems or achieving certain outcomes.
-
-Relatable Examples and Details: Human text often uses concrete, practical examples that are easy to relate to, providing specific details to clarify points.
-
-Conciseness with Clarity: Human text is usually concise but comprehensive, focusing on conveying the key idea without unnecessary complexity.
-
-Natural Flow: Human text tends to have a natural flow, with ideas and sentences building logically. It will have a balanced use of short and long sentences for ease of reading.
-
-Tone and Emphasis: The tone often includes personal or emotional elements, like motivation or purpose. It might have slight variations based on context, such as enthusiasm or curiosity.
-
-2. Patterns in AI-Generated Text:
-Overly Formal/Neutral Tone: AI-generated text might lean toward overly formal, robotic, or neutral tones without personal emphasis or emotional variation.
-
-Repetitive Ideas: AI content may repeat similar ideas or phrases, reflecting a lack of deep personalization or nuance.
-
-Lack of Practicality: While AI can generate detailed content, it might miss out on specific, practical examples or a relatable context that resonates with the reader.
-
-Complex Sentence Structures: AI-generated text often uses complex or convoluted sentence structures without a clear purpose, which might make it harder to follow the flow.
-
-3. Evaluation Criteria:
-Purpose and Specificity: Does the content have a clear goal or purpose? Is it solving a problem or providing a real-world example (Human)?
-
-Relatability and Examples: Does the text include relatable examples and practical details (Human)? Does it feel abstract or generalized (AI)?
-
-Tone and Emotion: Does the text feel naturally conversational or infused with personal motivation? Is it overly neutral or mechanical (AI)?
-
-Flow and Structure: Does the text flow naturally and feel easy to understand with appropriate sentence lengths and transitions (Human)? Is it overly complex or disjointed (AI)?
-
-4. Scoring Methodology:
-AI Text: Assign higher scores if the content is neutral, repetitive, lacks practical examples, or has an overly formal tone.
-Human Text: Assign lower scores if the content is purpose-driven, includes relatable examples, has natural flow, and carries emotional or personal tone.
+Human Text Characteristics
+Purpose-Driven: Clear goals, problem-solving focus, and actionable insights.
+Relatable Examples: Practical, specific details connected to real-world scenarios.
+Natural Flow: Logical progression with varied sentence structures.
+Personal Tone: Emotional, conversational, and contextually motivated.
+AI Text Patterns
+Neutral Tone: Robotic or impersonal, lacking emotional depth.
+Repetitive Ideas: Recurring phrases or lack of personalization.
+Abstract Content: Missing specific, relatable examples.
+Complex Sentences: Overly formal or convoluted structures.
+Evaluation Criteria
+Purpose and Specificity: Does it solve problems with clear goals (Human) or stay abstract (AI)?
+Relatability: Are examples practical and detailed (Human) or vague (AI)?
+Tone: Is it emotional and personal (Human) or neutral (AI)?
+Flow: Does it read naturally (Human) or feel disjointed (AI)?
+Scoring
+AI: Higher scores for neutral tone, repetition, or lack of examples.
+Human: Lower scores for purpose, relatable examples, and emotional tone.
 
         
         Text: {text}
